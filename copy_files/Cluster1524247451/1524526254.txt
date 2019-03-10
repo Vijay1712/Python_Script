@@ -1,0 +1,47 @@
+Student Answer: 
+
+public virtual void addToEnd(int newValue)
+	{
+		List last = new List(newValue);
+		if (this == null)
+		{
+			return;
+		}
+		else
+		{
+			List counter = this;
+			while (this.next != null)
+			{
+				counter = counter.next;
+			}
+			counter.next = last;
+			last.next = null;
+		}
+	}
+
+Fix:  while ( counter.next != null)
+
+Redundant: last.next = null
+
+Solution: 
+
+public virtual void addToEnd(int newValue)
+	{
+                //add code from poster
+        List last = new List(newValue);
+        if (this == null)
+        {
+            return;
+        }
+        else
+        {
+            List counter = this;
+            while (counter.next != null)
+            {
+                counter = counter.next;
+            }
+            counter.next = last;
+            last.next = null;
+        }
+
+	}

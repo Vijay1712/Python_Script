@@ -1,0 +1,26 @@
+Student Answer:
+
+if (this.next != null)
+{
+     this.next = new List(newValue);
+}
+     this.next = new List(newValue);
+
+
+Fix1:  (1) if (this.next == null)
+       (2) else {this.next.addToEnd(newValue) }
+
+Fix2:  (1) this.next.addToEnd(newValue)
+       (2) else { this.next = new List(newValue)}
+
+
+Solution: 
+
+  if (this.next == null)
+  {
+       this.next = new List(newValue);
+  }
+  else
+  {
+       this.next.addToEnd(newValue);
+  }           

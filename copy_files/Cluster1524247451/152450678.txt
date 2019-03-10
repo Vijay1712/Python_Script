@@ -1,0 +1,29 @@
+Student Answer:
+
+public virtual void addToEnd(int newValue)
+	{
+		List i = this;
+		while (this.next != null)
+		{
+			i = i.next;
+		}
+		i.next = new List(newValue);
+	}
+
+Fix: i.next != null
+
+Redundant: none
+
+Solution: 
+
+public virtual void addToEnd(int newValue)
+	{
+                
+        List i = this;
+        while (i.next != null)
+        {
+            i = i.next;
+        }
+        i.next = new List(newValue);
+
+	}

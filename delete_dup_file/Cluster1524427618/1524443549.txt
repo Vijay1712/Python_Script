@@ -1,0 +1,27 @@
+Student Answer: 
+
+if (null != this.next)
+{
+	next.addToEnd(newValue);
+}
+
+this.next = new List(newValue);
+return;
+
+Fix:  else{ this.next = new List(newValue)}
+
+Redundant: return;
+
+Solution: 
+
+public virtual void addToEnd(int newValue)
+{
+    if (null != this.next)
+    {
+	    next.addToEnd(newValue);
+    }
+    else
+    {
+       this.next = new List(newValue);
+    }
+}
